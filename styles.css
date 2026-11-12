@@ -213,7 +213,7 @@ a{ color: var(--eosin); text-underline-offset: .18em; }
 }
 .hero__title span{
   color: transparent;
-  -webkit-text-stroke: 1.6px var(--ink);
+  -webkit-text-stroke: 2.4px var(--ink);
 }
 
 .hero__body{
