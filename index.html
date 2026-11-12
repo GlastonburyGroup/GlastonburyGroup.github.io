@@ -1,1 +1,446 @@
-Coming soon!
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glastonbury Group — machine learning for human disease genetics</title>
+<meta name="description" content="The Glastonbury Group develops machine learning methods that turn biomedical images and clinical data into phenotypes, and links them back to the genome.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- whole-page background -->
+<div class="scope" aria-hidden="true">
+  <canvas class="scope__canvas" id="tissue"></canvas>
+  <div class="scope__scrim"></div>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <img src = 'ht-logo-color-mobile.png', alt="human technopole logo" height=21>
+    <span class="brand__name">Glastonbury Group</span>
+    <span class="brand__org">Human Technopole</span>
+  </a>
+
+  <nav class="topnav" aria-label="Sections">
+    <a href="#approach">Approach</a>
+    <a href="#research">Research</a>
+    <a href="#people">People</a>
+    <a href="#retreats">Retreats</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!--  HERO  -->
+  <section class="hero" id="top">
+    <div class="sheet hero__text">
+      <p class="eyebrow">Fondazione Human Technopole &middot; Milan</p>
+      <h1 class="hero__title">Glastonbury <span>Group</span></h1>
+      <div class="hero__body">
+        <p class="lede">
+          The Glastonbury Group applies and develops machine learning methods to understand the
+          genetic basis of a range of complex diseases. With the advent of population scale
+          biobanking, rich data modalities are being collected on hundreds of thousands of
+          individuals. One such data type is imaging data, a high dimensional and information rich
+          modality for human phenotyping.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#research">What we work on</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <ul class="modalities" aria-label="Data we work with">
+        <li>Histopathology &amp; whole slide imaging</li>
+        <li>Spatial transcriptomics</li>
+        <li>Clinical records</li>
+        <li>Biobank cohorts</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--  APPROACH  -->
+  <section class="band" id="approach">
+    <div class="wrap sheet">
+      <p class="eyebrow">Approach</p>
+      <h2 class="h2">From a stained slide to a variant</h2>
+      <p class="prose">
+        The Glastonbury Group is interested in applying machine learning techniques to any aspect of human genetic discovery (Variant → Gene → Phenotype). One of the key focuses the
+        Glastonbury Group has is to extract cellular and disease mechanism phenotypes from
+        histopathology images. Whole Slide Imaging (WSI) of tissue sections are routinely used to
+        diagnose a range of diseases, such as Inflammatory Bowel Disease (IBD), various oncologies
+        as well as neurological diseases post-mortem. By using both supervised and unsupervised
+        machine learning techniques, it is possible to extract highly precise cellular and tissue
+        phenotypes from such images and use them to characterise the cause and consequence of an
+        underlying disease. By coupling such image derived phenotypes with genetic information
+        (e.g. genotyping, exome, whole genome-sequencing), we can start to unpick mechanistically
+        how a genetic variant contributes to increasing disease risk and how such risk is shared
+        across diseases and phenotypes.
+      </p>
+
+      <ol class="chain" aria-label="Variant to phenotype">
+        <li class="chain__step">
+          <p class="chain__label">Variant</p>
+          <p>Genotypes, exomes and whole genomes across biobank-scale cohorts.</p>
+        </li>
+        <li class="chain__step">
+          <p class="chain__label">Gene</p>
+          <p>Prioritisation that says which gene at a locus is actually doing the work.</p>
+        </li>
+        <li class="chain__step">
+          <p class="chain__label">Phenotype</p>
+          <p>Cell and tissue measurements learned from images, not read off a label.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!--  RESEARCH  -->
+  <section class="band" id="research">
+    <div class="wrap sheet sheet--well">
+      <p class="eyebrow">Research</p>
+      <h2 class="h2">Research Topics</h2>
+
+      <div class="cards">
+        <article class="card">
+          <p class="card__tag">Representation</p>
+          <h3 class="card__title">
+            <button class="card__open" type="button" aria-haspopup="dialog">Machine learning method development</button>
+          </h3>
+          <p>
+            Unsupervised, self-supervised and supervised methods, developed for and
+            applied to large-scale biomedical imaging datasets.
+          </p>
+          <span class="card__more" aria-hidden="true">Read more</span>
+          <!-- text shown in the pop-up -->
+          <div class="card__detail" hidden>
+              <p>Unsupervised, self-supervised and supervised methods, developed for and
+            applied to large-scale biomedical imaging datasets.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="card__tag">Phenotype</p>
+          <h3 class="card__title">
+            <button class="card__open" type="button" aria-haspopup="dialog">Unsupervised phenotype discovery</button>
+          </h3>
+          <p>
+            Phenotypes learned directly from clinical data and imaging, without waiting
+            for someone to define the label first.
+          </p>
+          <span class="card__more" aria-hidden="true">Read more</span>
+          <!-- text shown in the pop-up -->
+          <div class="card__detail" hidden>
+              <p>Phenotypes learned directly from clinical data and imaging, without waiting
+            for someone to define the label first.
+          </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <p class="card__tag">Association</p>
+          <h3 class="card__title">
+            <button class="card__open" type="button" aria-haspopup="dialog">Scalable pipelines for discovery</button>
+          </h3>
+          <p>
+            Development of scalable methods and pipelines for rapid GWAS and
+            gene prioritisation.
+          </p>
+          <span class="card__more" aria-hidden="true">Read more</span>
+          <!-- text shown in the pop-up -->
+          <div class="card__detail" hidden>
+              <p>Development of scalable methods and pipelines for rapid GWAS and
+            gene prioritisation.
+          </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--  PEOPLE  -->
+  <section class="band" id="people">
+    <div class="wrap sheet">
+      <p class="eyebrow">People</p>
+
+      <div class="lead">
+        <img src="people/glastonbury-3-1536x1536.jpg" alt='Craig Glastonbury' height="150">
+        <div class="lead__text">
+          <h3 class="person__name person__name--lg">Craig Glastonbury</h3>
+          <p class="person__role">Group Leader</p>
+          <p class="person__bio">
+            Dr Craig A. Glastonbury holds a PhD in computational biology from King’s College
+            London (2013–2017). Before joining Human Technopole as a Research Group leader
+            (06/2022), Craig was a lead machine learning researcher at the drug discovery company
+            BenevolentAI (2019–2022) and a Postdoctoral research fellow at the University of
+            Oxford (2017–2019).
+          </p>
+          <p class="person__links">
+            <a class="mail" data-user="craig.glastonbury" data-domain="fht.org">email</a>
+          </p>
+        </div>
+      </div>
+
+      <ul class="people">
+        <li class="person">
+          <img class='img-people' src="people/Chatterjee-1536x1536.jpg" alt='Soumick Chatterjee' height="80">
+          <h3 class="person__name">Soumick Chatterjee</h3>
+          <p class="person__role">Postdoc</p>
+        </li>
+        <li class="person">
+          <img class='img-people' src="people/mariani-1536x1536.jpg" alt='Andrea Mariani' height="80">
+          <h3 class="person__name">Andrea Mariani</h3>
+          <p class="person__role">Postdoc</p>
+        </li>
+        
+        <li class="person">
+          <img class='img-people' src="people/soda-1536x1536.jpg" alt='Emanuel Soda' height="80">
+          <h3 class="person__name">Emanuel Soda</h3>
+          <p class="person__role">PhD student</p>
+        </li>
+        <li class="person">
+          <img class='img-people' src="people/clerici-1536x1536.jpg" alt='Giuditta Clerici' height="80">
+          <h3 class="person__name">Giuditta Clerici</h3>
+          <p class="person__role">PhD student</p>
+        </li>
+        <li class="person">
+          <img class='img-people' src="people/shavick.jpeg" alt='Alex Shavick' height="80">
+          <h3 class="person__name">Alex Shavick</h3>
+          <p class="person__role">PhD student</p>
+        </li>
+        <li class="person">
+          <img class='img-people' src="people/manenti-1536x1536.jpg" alt='Carlo Manenti' height="80">
+          <h3 class="person__name">Carlo Manenti</h3>
+          <p class="person__role">PhD student</p>
+        </li>
+        <li class="person">
+          <img class='img-people' src="people/emma-walker.jpeg" alt='Emma Walker' height="80">
+          <h3 class="person__name">Emma Walker</h3>
+          <p class="person__role">PhD student</p>
+        </li>
+        <li class="person">
+          <span class="person__mono" style="--tint:#482878" aria-hidden="true">EL</span>
+          <h3 class="person__name">Elena Lippolis</h3>
+          <p class="person__role">Postgraduate intern</p>
+        </li>
+      </ul>
+
+      <div class="alumni" id="alumni">
+        <h3 class="alumni__title">Alumni</h3>
+        <!-- one <li> per former member: name, role in the group and years, where they are now -->
+        <ul class="alumni__list">
+          <li class="alum">
+            <span class="alum__name">Francesco Cisternino</span>
+            <span class="alum__was">PhD, 2022–2026</span>
+            <span class="alum__now">Now Computational Biology Research Scientist at Bristol Myers Squibb</span>
+          </li>
+          <li class="alum">
+            <span class="alum__name">Emanuele Bianchi</span>
+            <span class="alum__was">Bioinformatics Intern, 2023-2024</span>
+            <span class="alum__now">Now PhD student at kresk, Lisbon</span>
+          </li>
+          <li class="alum">
+            <span class="alum__name">Sara Ometto</span>
+            <span class="alum__was">Bioinformatician, 2024–2026</span>
+            <span class="alum__now">Now translational data science researcher @ CHUV</span>
+          </li>
+          <li class="alum">
+            <span class="alum__name">Emma Didelon</span>
+            <span class="alum__was">Bioinformatics Intern, 2025-2026</span>
+            <span class="alum__now">Now Bioinformatician at San Raffaele Telethon Institute for Gene Therapy</span>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!--  RETREATS  -->
+  <section class="band" id="retreats">
+    <div class="wrap sheet">
+      <p class="eyebrow">Retreats</p>
+      <h2 class="h2">Group Retreats</h2>
+      <ul class="gallery">
+        <li class="shot">
+          <button class="shot__open" type="button" data-full="retreats/20250513_055614723_iOS.png" aria-haspopup="dialog">
+            <img src="retreats/20250513_055614723_iOS.png" alt="Retreat 2025 location 1" loading="lazy" width="400" height="300">
+          </button>
+          <p class="shot__cap">Retreat location &middot; 2025</p>
+          <p class="shot__desc" hidden>&middot; 2025</p>
+        </li>
+        <li class="shot">
+          <button class="shot__open" type="button" data-full="retreats/20250513_055622076_iOS.png" aria-haspopup="dialog">
+            <img src="retreats/20250513_055622076_iOS.png" alt="Retreat 2025 location 2" loading="lazy" width="400" height="300">
+          </button>
+          <p class="shot__cap">Retreat location &middot; 2025</p>
+          <p class="shot__desc" hidden>&middot; 2025</p>
+        </li>
+        <li class="shot">
+          <button class="shot__open" type="button" data-full="retreats/image-20250512-142654-fb6d146b 1.jpeg" aria-haspopup="dialog">
+            <img src="retreats/image-20250512-142654-fb6d146b 1.jpeg" alt="Retreat 2025 wine tasting" loading="lazy" width="400" height="300">
+          </button>
+          <p class="shot__cap">Wine tasting, retreat 2025</p>
+          <p class="shot__desc" hidden>Wine tasting, retreat 2025</p>
+        </li>
+        <li class="shot">
+          <button class="shot__open" type="button" data-full="retreats/image-20250513-145858-7825a13a 1.jpeg" aria-haspopup="dialog">
+            <img src="retreats/image-20250513-145858-7825a13a 1.jpeg" alt="Retreat 2025 cooking class" loading="lazy" width="400" height="300">
+          </button>
+          <p class="shot__cap">Cooking class, retreat 2025</p>
+          <p class="shot__desc" hidden>Cooking class, retreat 2025</p>
+        </li>
+        <li class="shot">
+          <button class="shot__open" type="button" data-full="retreats/retreat-6.svg" aria-haspopup="dialog">
+            <img src="retreats/retreat-6.svg" alt="Retreat 2025" loading="lazy" width="400" height="300">
+          </button>
+          <p class="shot__cap">Retreat &middot; 2025</p>
+          <p class="shot__desc" hidden>From our first group retreat.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!--  CONTACT  -->
+  <section class="band" id="contact">
+    <div class="wrap sheet">
+      <p class="eyebrow">Contact</p>
+      <h2 class="h2">Get in touch</h2>
+      <p class="prose">
+        For questions about our research or possible collaborations, write to Craig.
+      </p>
+      <p class="contact">
+        <a class="mail" data-user="craig.glastonbury" data-domain="fht.org">email</a>
+      </p>
+
+      <div class="positions" id="positions">
+        <h3 class="positions__title">Open positions</h3>
+        <!-- one <article> per open position: copy a block to add another -->
+        <div class="positions__grid">
+          <article class="position">
+            <p class="position__tag">PhD &middot; Open</p>
+            <h4 class="position__name">PhD — GI organoids for understanding inflammatory and metabolic diseases</h4>
+            <p class="position__desc">
+              The Glastonbury Group uses functional genomics and single-cell technologies to map genetic risk variants (GWAS/Exome) to specific cell types, target genes, and disease mechanisms.
+              By combining digital pathology, spatial transcriptomics (e.g., Xenium, Multiome), and patient-derived GI organoids, this project aims to:
+              <ul>
+                <li><strong>Enteroendocrine Cell (EEC) Biology:</strong> Mapping EEC patterning along the GI tract and their role in metabolic diseases.</li>
+                <li><strong>IBD Effector Genes:</strong> Dissecting epithelial and mucosal gene networks involved in Inflammatory Bowel Disease.</li>
+                <li><strong>Functional Genomics:</strong> Validating hits using single-cell profiling (Flex, Multiome), spatial imaging (Xenium), and high-throughput CRISPR-Cas9 screens.</li>
+              </ul>
+
+            </p>
+            <dl class="position__meta">
+              <div><dt>Start</dt><dd>27/10/2026</dd></div>
+              <div><dt>Deadline</dt><dd>30/11/2026</dd></div>
+            </dl>
+            <a class="position__link" href="#">Details &amp; how to apply →</a>
+          </article>
+          <article class="position">
+            <p class="position__tag">PhD &middot; Open</p>
+            <h4 class="position__name">PhD — Understanding the genetic basis of complex disease through the lens of machine learning and spatial transcriptomics</h4>
+            <p class="position__desc">
+             The Glastonbury Group leverages machine learning, digital pathology, and spatial transcriptomics to bridge human genetics (GWAS/Exome) with cell-type-specific disease mechanisms and precision diagnostics. By integrating routine clinical imaging with high-resolution spatial assays, our research focuses on three core themes:
+            <ul>
+              <li><strong>Predictive Pathology Models:</strong> Building ML models on large-scale whole slide images (WSI) for improved disease staging and prognostic prediction (e.g., predicting IBD hospitalization, quantifying plasma cells in multiple myeloma).</li>
+              <li><strong>Spatial Multimodal Integration:</strong> Augmenting routine clinical histology by integrating spatially resolved transcriptomics data (e.g., Visium HD, Xenium).</li>
+              <li><strong>Pathological Mechanisms &amp; Risk Loci:</strong> Elucidating shared and unique disease pathways to link cell-specific pathology (e.g., Crohn's disease granulomas) to human genetic risk variants.</li>
+            </ul>
+            </p>
+            <dl class="position__meta">
+              <div><dt>Start</dt><dd>27/10/2026</dd></div>
+              <div><dt>Deadline</dt><dd>30/11/2026</dd></div>
+            </dl>
+            <a class="position__link" href="#">Details &amp; how to apply →</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="foot">
+  <div class="wrap foot__in">
+    <p class="foot__where">
+      <strong>Glastonbury Group</strong><br>
+      Fondazione Human Technopole<br>
+      Viale Rita Levi-Montalcini 1, Milan
+    </p>
+    <p class="foot__cred">Website developed by Elena Lippolis</p>
+  </div>
+</footer>
+
+<!--  topic pop-up  -->
+<dialog class="topic" id="topic" aria-labelledby="topicTitle">
+  <div class="topic__in">
+    <form method="dialog" class="topic__close-form">
+      <button class="topic__close" aria-label="Close">×</button>
+    </form>
+    <p class="topic__tag" id="topicTag"></p>
+    <h2 class="topic__title" id="topicTitle"></h2>
+    <div class="topic__body" id="topicBody"></div>
+  </div>
+</dialog>
+
+<!--  retreat photo viewer  -->
+<dialog class="viewer" id="viewer" aria-label="Retreat photo">
+  <form method="dialog" class="viewer__close-form">
+    <button class="topic__close" aria-label="Close">×</button>
+  </form>
+  <figure class="viewer__fig">
+    <div class="viewer__stage">
+      <img class="viewer__img" id="viewerImg" alt="">
+      <button class="viewer__nav viewer__nav--prev" id="viewerPrev" type="button" aria-label="Previous photo">‹</button>
+      <button class="viewer__nav viewer__nav--next" id="viewerNext" type="button" aria-label="Next photo">›</button>
+    </div>
+    <figcaption class="viewer__text">
+      <span class="viewer__count" id="viewerCount"></span>
+      <p class="viewer__cap" id="viewerCap"></p>
+      <p class="viewer__desc" id="viewerDesc"></p>
+    </figcaption>
+  </figure>
+</dialog>
+
+<!--  background controls  -->
+<section class="lens" id="lens" aria-label="Background view">
+  <button class="lens__handle" id="lensToggle" aria-expanded="true" aria-controls="lensPanel">
+    <span class="lens__handle-on">Hide controls</span>
+    <span class="lens__handle-off">Section view</span>
+  </button>
+
+  <div class="lens__panel" id="lensPanel">
+    <div class="lens__row">
+      <div class="bar" id="bar" aria-hidden="true">
+        <span class="bar__label">UMI counts</span>
+        <span class="bar__ramp" id="barRamp"></span>
+        <span class="bar__ticks"><i>0</i><i>200</i><i>400</i><i>600</i></span>
+      </div>
+
+      <div class="lens__tools">
+        <button id="zoomOut" title="Wider field" aria-label="Wider field">−</button>
+        <button id="zoomIn" title="Closer field" aria-label="Closer field">+</button>
+        <button id="reseed" title="New section" aria-label="New section">↻</button>
+      </div>
+    </div>
+
+    <div class="lens__slide">
+      <span class="lens__end">Tissue image</span>
+      <input type="range" id="mix" min="0" max="100" value="0" step="1"
+             aria-label="Blend from tissue image to binned UMI counts"
+             aria-valuetext="Tissue image">
+      <span class="lens__end lens__end--r">8 µm bin UMI counts</span>
+    </div>
+  </div>
+</section>
+
+<script src="bg-image.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
